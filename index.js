@@ -107,6 +107,7 @@ async function run() {
             const result = await tasksCollection.updateOne(filter, updatedDoc, options);
             res.send(result)
         })
+      
         // delete task
         app.delete('/tasks/:id', async (req, res) => {
             const id = req.params.id;
